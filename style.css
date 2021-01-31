@@ -1,6 +1,8 @@
 body{
     background-image: url("https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29kaW5nfGVufDB8fDB8&ixlib=rb-1.2.1&w=1000&q=80");
     font-family: 'Fraunces', serif;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
