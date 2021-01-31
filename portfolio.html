@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces&display=swap" rel="stylesheet">
+    </head>
+    <body id="func">
+        <div class="main" id="main">
+        <div id="firstPage">
+        <div class="heading">
+            <div class="pic-div">
+            <img class="pic" src="pic.jpeg">
+            </div>
+            <p class="name">Prasad Thakare</p>
+            <p class="description">
+                Hi there! This is Prasad Thakare, I'm an aspiring software developer at VJTI Mumbai.<br>
+                My hobbies are exploring and implementing new libraries and frameworks. I'm experienced<br>
+                in backend web development as well as android app development.<br>
+                My prefered tech stack is:
+                <ul class="tech-stack">
+                    <li>Express/Flask</li>
+                    <li>HTML/CSS/JS</li>
+                    <li>SQL/Mongo</li>
+                </ul> 
+            </p>
+        </div>
+        <div class="body">
+
+            <div class="education">
+                <p class="college">
+                    Education:<br>
+                    Veermata Jijabai Technological Institute<br>
+                    B.tech Computer Engineering<br>
+                </p>
+            </div>
+
+            <div class="projects">
+                My projects include:
+                <ul class="project-list">
+                    <li>Meetify</li>
+                    <li>Novel Community</li>
+                    <li>Crop Recommender</li>
+                </ul>
+            </div>
+        </div>
+
+        <div>
+            <p class="buttonTag">Change Font <button onclick="changeFont()">click here!</button></p><br>
+            <p class="buttonTag">Change Background <button onclick="changeBackground()">click here!</button></p><br>
+            <div class="Dark">
+            <button onclick="darkmode()" id="darkMode">Dark Mode!</button>
+            </div>
+        </div>
+
+        <div class="rightSide">
+
+        <button onclick="nextPage()" class="nextPage">&#8594;</button>
+        </div>
+    </div>
+
+    <!---Second Page-->
+
+    <div id="secondPage" class="secondPage">
+        <table style="width:100%">
+            <tr>
+              <th>Technology</th>
+              <th>Language</th>
+              <th>Image</th>
+            </tr>
+            <tr>
+              <td>Flask</td>
+              <td>Python</td>
+              <td><img class="table-image" src="https://miro.medium.com/max/800/1*Q5EUk28Xc3iCDoMSkrd1_w.png"></td>
+            </tr>
+            <tr>
+                <td>Django</td>
+                <td>Python</td>
+                <td><img class="table-image" src="https://cdn.iconscout.com/icon/free/png-256/django-2-282855.png"></td>
+              </tr>
+            <tr>
+              <td>Express</td>
+              <td>Javascript</td>
+              <td><img class="table-image" src="https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png"></td>
+            </tr>
+            <tr>
+                <td>React</td>
+                <td>Javascript</td>
+                <td><img class="table-image" src="https://miro.medium.com/max/3200/1*EVqCcmCPgpNKxU1wzcTHgw.png"></td>
+            </tr>
+            <tr>
+                <td>MySQL</td>
+                <td>SQL</td>
+                <td><img class="table-image" src="https://d1.awsstatic.com/asset-repository/products/amazon-rds/1024px-MySQL.ff87215b43fd7292af172e2a5d9b844217262571.png"></td>
+            </tr>
+            <tr>
+                <td>MongoDB</td>
+                <td>---</td>
+                <td><img class="table-image" src="https://nakedsecurity.sophos.com/wp-content/uploads/sites/2/2017/01/mongodb.png?w=775"></td>
+            </tr>
+          </table>
+          <br>
+
+        <button onclick="prevPage()">&#8592;</button>
+    </div>
+
+
+
+
+
+</div>
+    <script>
+
+        var checkFont = false;
+        var checkBackground = false;
+        var dark=false;
+
+        var body = document.getElementById("func");
+        function changeFont(){
+            if(!checkFont){
+            body.style.fontFamily = "Lobster,cursive";
+            checkFont=true;
+            }
+            else{
+            body.style.fontFamily = "Fraunces,serif";
+            checkFont=false;
+            }
+
+        }
+
+        function changeBackground(){
+            if(!checkBackground){
+            body.style.backgroundImage = "url('https://cdn-images-1.medium.com/max/1200/0*tCz6lxY5sQ7owU9j.jpeg')";
+            checkBackground=true;
+            }
+            else{
+                body.style.backgroundImage = "url('https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29kaW5nfGVufDB8fDB8&ixlib=rb-1.2.1&w=1000&q=80')";
+                checkBackground=false;
+            }
+        }
+
+        function darkmode(){
+            if(!dark){
+                var div = document.getElementById("main");
+                div.style.backgroundColor = "black";
+                body.style.color= "white";
+                dark = true;
+                document.getElementById("darkMode").textContent="Light Mode!";
+            }
+            else{
+                var div = document.getElementById("main");
+                div.style.backgroundColor = "white";
+                body.style.color="black";
+                dark = false;
+                document.getElementById("darkMode").textContent="Dark Mode!";
+            }
+        }
+
+        function nextPage(){
+            document.getElementById("firstPage").style.display='none';
+            document.getElementById("secondPage").style.display='block';
+        }
+
+        function prevPage(){
+            document.getElementById("firstPage").style.display='block';
+            document.getElementById("secondPage").style.display='none';
+
+        }
+
+    </script>
+    </body>
+</html>
